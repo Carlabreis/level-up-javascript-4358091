@@ -31,3 +31,19 @@ class Book {
 }
 
 // Write your code here
+// inherit from Book class
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition) {
+    super(title, author, ISBN, numCopies);
+    this.edition = edition;
+  }
+
+  getEdition() {
+    return `The current version of this book is ${this.edition}`;
+  }  
+}
+
+const CrackingTheCodingInterview = new TechnicalBook("Crackinh The Coding Interview", "author name", 12345, 20, "2nd");
+
+console.log(CrackingTheCodingInterview.availability);
+console.log(CrackingTheCodingInterview.getEdition());
